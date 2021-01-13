@@ -1,0 +1,367 @@
+*
+{
+    margin: 0;
+    padding: 0; 
+   
+}
+.nav-bar{
+    background:black;
+    color: #fff;
+    padding: 20px;
+    font-family: sans-serif;
+}
+.nav-bar h1{
+    height: 45px;
+    float: left;
+    margin-left: 20px;
+}
+
+
+
+.menu-right{
+    text-align: right;
+}
+ul a{
+    display: inline-block;
+    margin: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+ul a:hover{
+    color: cadetblue;
+}
+
+span{
+    margin: 0 20px;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+}
+
+@media only screen and (max-width: 700px){
+    span
+    {
+        display: block;
+    }
+    ul a{
+        display: block;
+    }
+    a{
+        display: none;
+    }
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-areas: "left right" ;
+    /*clip-path: polygon(0 0, 100% 0,100% 100%, 70% 90%, 0 100%);*/
+}
+@media only screen and (max-width:700px){
+    .container{
+       display: grid;
+       grid-template-rows: 0.1fr 1fr;
+       grid-template-areas: "right right" 
+                            "left left";
+       
+    }
+}
+/*#clip-path{
+    color: black;
+}*/
+.left{
+    grid-area:left;
+    
+}
+.left img{
+    width:300px;
+    height:500px;
+    padding-top: 35px;
+    border: 2px solid black;
+}
+.left img{
+    padding:30px;
+ 
+}
+.right{
+    grid-area:right;
+    padding:30px;
+    padding-top: 70px;
+}
+.right h1{
+    font-size: 70px;
+}
+.right h2{
+    font-size:50px;
+}
+.carousel-item img{
+    width:50%;
+    height:48rem;
+    background: #777;
+}
+.page-3 img{
+    padding-top: 50px;
+    width: 100%;
+    background-color: black;
+    width:300px;
+    background-repeat: no-repeat;
+    padding:35px;
+    clip-path:circle(140px at 50% 50%);
+}
+
+.page-3{
+    background-color: black;
+    clip-path: polygon(0 0, 100% 0,94% 52%,100% 100%,0 100%);
+    display:grid;
+    grid-template-columns: 
+                           1fr 1fr 1fr
+                           1.2fr 1.2fr 1.2fr
+                           1fr 1fr 1fr;
+    grid-template-areas: "heading heading heading"
+                         "image1 image2 image3"
+                         "image4 image5 image6";
+               
+}
+
+@media only screen and (max-width:700px){
+    .page-3{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-areas:    "heading"
+                                "image1" 
+                                "image2"
+                                "image3"
+                                "image4"
+                                "image5"
+                                "image6";
+           
+    }
+}
+
+.heading{
+    grid-area:heading;
+}
+.heading h1{
+    padding-left:60px ;
+    margin:auto;
+    font-size: 30px;
+    padding-top: 30px;
+}
+
+
+.image1{
+   grid-area:image1;
+   padding-top: 40px;
+}
+
+.image2{
+    grid-area:image2;
+    padding-top: 40px;
+ }
+ 
+.image3{
+    grid-area:image3;
+    padding-top: 40px;
+ }
+ 
+.image4{
+    grid-area:image4;
+    padding-top: 40px;
+ }
+ 
+.image5{
+    grid-area:image5;
+    padding-top: 40px;
+ }
+ 
+.image6{
+    grid-area:image6;
+    padding-top: 40px;
+ }
+ 
+
+.about{
+    min-height: 130vh;
+	background-color: beige;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+ .container2{
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 1100px;
+    background: #fff;
+}
+.card{
+	width: 300px;
+	height: 450px;
+	padding: 40px 30px;
+	margin: 10px;
+	border-radius: 1rem;
+	box-shadow: 9px 9px 16px rgba(163,177,198,.6),
+				-9px -9px 16px rgba(255,255,255,.5);
+
+}
+.imgBox{
+	width: 100px;
+	height: 100px;
+	border: 1px solid #eaeff5;
+    
+	margin: 0 auto;
+	border-radius: 100px;
+	overflow: hidden;
+	box-shadow: 9px 9px 16px rgba(163,177,198,.6),
+				-9px -9px 16px rgba(255,255,255,.5);
+
+}
+.imgBox img{
+	width: inherit;
+	height: inherit;
+}
+
+.card p{
+	color: black;
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 10px 0;
+	line-height: 1.5rem;
+}
+
+
+ .contact{
+    position: relative;
+    min-height:100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+}
+.content .content h1{
+    font-size: 100px;
+    font-weight: 300;
+    color: black;
+}
+.content h2{
+    font-size:60px;
+}
+.container1{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:30px;
+}
+.container1 .contactInfo{
+    width:50%;
+    display:flex;
+    flex-direction: column;
+}
+.container1 .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display:flex;
+}
+.container1 .contactInfo .box .Icon{
+    min-width: 60px;
+    height:60px;
+    background:blanchedalmond;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size:22px;
+}
+.container1 .contactInfo .box .text{
+    display:flex;
+    margin-left: 20px;
+    font-size:16px;
+    color:black;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container1 .contactInfo .box .text h3{
+    font-weight: 500;
+    color:black;
+
+}
+.contactForm{
+    width:40%;
+    padding: 40px;
+    background: rgb(48, 40, 40);
+}
+.contactForm h2{
+    font-size:30px;
+    color:#fff;
+    font-weight:500;
+}
+.contactForm .inputBox{
+    position:relative;
+    width:100%;
+    margin-top:10px;
+}
+.contactForm .inputBox input,
+.contactform .inputBox textarea{
+          
+    width:100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline:none;
+    resize:none;
+}
+.contactForm .inputBox span{
+    position: absolute;
+    left:0;
+    right:10px;
+    padding: 10px 0;
+    font-size:16px;
+    margin:12px 0;
+    pointer-events:none;
+    transition: 0.6%;
+    color:#666;
+    display: inline;
+}
+.contactForm .inputBox input:focus~span,
+.contactForm .inputBox input:valid~span
+.contactForm .inputBox textarea:focus~span,
+.contactForm .inputBox textarea:valid~span
+{
+    color:#fff;
+    font-size: 12px;
+    transform: translate(-20px);
+    
+}
+.contactForm .inputBox input[type="submit"]
+{
+    width:100px;
+    background:#fff;
+    color: black;
+    border:none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+@media (max-width:700px){
+    .contact{
+        padding: 50px;
+    }
+    .container1{
+        flex-direction: column;
+    }
+    .container1 .contactInfo{
+        margin-bottom:40px;
+        width:100%;
+    }
+    .container1 .contactForm{
+        width:300px;
+    }
+}
+
