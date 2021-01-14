@@ -46,7 +46,7 @@ span{
     ul a{
         display: block;
     }
-    a{
+    ul{
         display: none;
     }
 }
